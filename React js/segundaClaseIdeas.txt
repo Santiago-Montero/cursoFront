@@ -1,0 +1,35 @@
+React clase 2 :
+
+react ==> virtual Dom , React fiber y reconciliacion (algoritmo que hace la magia)
+
+DOM  tiene costo de memoria , react hizo algo para obtener lo mismo con menos recursos , plantea un arbol (react fiber three) 
+desde donde se ve modificaciones , ahi se modifica , se carga un dom virtual , en el cual un algoritmo ve los cambios futuros y ve la 
+manera mas rapida de hacerla . tiene dos arboles y los compara 
+
+flujo de datos unidireccional ==> datos entren por el punto mas arriba del arbol , y los cambios van de arriba hacia abajo
+
+virtual dom ==> imagen en memoria para comparar con lo que se muestra enrealidad ( se implementa con fiber) 
+
+diffing (diferencia) como un pull request ==> busca dif lo actualiza 
+ ==========================================================================================================
+NODE ==> necesitamos q el codigo q escribimos , alguien se lo traduzca a la COMPUTADORA no al google, por eso esta node
+pero se lotraduce a la compu 
+(JAVASCRIPT EJECUTADO EN OTRO LADO ) NODE.JS 
+
+NPM ==> cuando instalas node necesitaas instalar modulos , cosas , porque porsi solo node no hace mucho , con npm
+instalamos lo que nosotros queremos , solo q necesitemos , es una caja de herramientas para usarlas en node, en esa 
+caja ponemos lo que necesitamos nada mas 
+
+cli linea de comando , para el sistema haga algo , react tiene su propia linea de comando 
+
+cli command line 
+
+(    npx create-react-app nombre-de-la-app    )
+===================================================================================================================
+
+package.json ==> mapa toda la aplicacion 
+
+borrar piquito de package.json 
+
+
+REACT TODO ES COMPONENTE 

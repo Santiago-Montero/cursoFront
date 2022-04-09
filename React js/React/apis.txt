@@ -1,0 +1,73 @@
+Api productos 
+
+
+import React from 'react';
+import './style.css';
+import { useState } from 'react';
+import { useEffect } from 'react';
+
+export default function App() {
+  console.log('hola');
+  const [listProduct, setListProduct] = useState([]);
+  useEffect(() => {
+    fetch('https://api.mercadolibre.com/sites/MLA/search?q=iphone')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(user) {
+        setListProduct(user.results.slice(0, 10));
+      });/*
+      .then(response => {return response.json()})
+      .then(response => {
+        setListProduct(response.results.slice(0, 10));
+      }); mas lindo */
+  }, []);
+  return (
+    <div>
+      <h1>Probando api mercado libre anasheeeeeeeeeeeeeeeeeeeeeeee</h1>
+      {console.log(listProduct)}
+      {listProduct.map(p => (
+        <li key={p.id}>{p.title}</li>
+      ))}
+    </div>
+  );
+  
+}
+
+
+=================================================
+
+Api Buscar 
+
+
+import React from 'react';
+import './style.css';
+import { useState } from 'react';
+
+export default function App() {
+  console.log('hola');
+  const [listProduct, setListProduct] = useState([]);
+  const [input, setInput] = useState('');
+
+  const handleForm = () => {
+    fetch('https://api.mercadolibre.com/sites/MLA/search?q=iphone')
+      .then(response => {
+        return response.json();
+      })
+      .then(response => {
+        setListProduct(response.results.slice(0, 10));
+      });
+  };
+  return (
+    <div>
+      <h1>Probando api mercado libre anasheeeeeeeeeeeeeeeeeeeeeeee</h1>
+      {console.log(listProduct)}
+      <input type="text" onChange={event => setInput(event.target.value)} />
+      <button onClick={handleForm}>Buscar</button>
+      {listProduct.map(p => (
+        <li key={p.id}>{p.title}</li>
+      ))}
+    </div>
+  );
+}
+=================================================

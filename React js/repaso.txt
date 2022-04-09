@@ -1,0 +1,55 @@
+console.log("Buenasssssssssssssssssssssssss")
+
+  const numeros = [1,2,3,4]
+  const nuevoNumeros = [...numeros] // me devuelve (por los puntitos) [1,2,3,4]
+  const conArraydentro = [numeros] // sin los puntitos me trae el array , me devuelve [[]]
+  console.log(nuevoNumeros ); // me trae el array pero no como un array sino q me pasa los datos 
+  
+  const objeto = {
+    tipo : "coche",
+    anio : "2001"
+  }
+  // ... Spread 
+  const nuevoObjeto = { // le piso el valor q quiero, osea lo llamo y cambio el que quiero
+    ...objeto,  
+    anio: "2021"
+  }
+
+  const alumno = {
+    nombre : "santi",
+    apellido : "montero",
+    edad : 20
+  }
+  const key = "edad"
+
+  const {apellido , [key] : eliminarPropiedadEdad ,...restoPropiedades} = alumno
+
+  console.log(apellido)
+  console.log(eliminarPropiedadEdad)
+  console.log(restoPropiedades)
+
+  let a, b, rest 
+
+  [a, b, ...rest] = [10, 20, 40, 50, 60] // me acomoda los array , me asigna el primer elemento a 10(primer elemento) y el segundo a 20 , se guarda como el tipo del dato del array
+  // ...rest va a tener el "resto" del array q no se usa , se guarda como array
+  // sin los puntos se le asignaria 40 a rest 
+
+  const array = [
+    {name: "juan", edad : 2 },
+    {name: "sergio", edad : 55 },
+    {name: "seba", edad : 4 },
+    {name: "gero", edad : 56 },
+    {name: "mati", edad : 23 },
+    {name: "santi", edad : 2 }
+  ]
+
+  const nuevoArray = array.filter(elem => elem.edad >= 3)
+  console.log(nuevoArray);
+
+  const nums = [1,2,3,4]
+  nums.forEach(elem => {
+    console.log(`hola soy el numero ${elem}`)
+  })
+
+  const nuevonums = nums.map(elem => elem *2)
+  console.log(nuevonums)

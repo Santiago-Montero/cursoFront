@@ -1,0 +1,87 @@
+framework ===>>> soluciones , espacio de trabajo 
+
+libreria ====>>> react es libreria , bootstrap es libreria
+
+
+sugar sintax ==>>> mejor forma de escribir
+
+operador ternanio ===>>>> el if en una linea ==>>> condicion ? (que hace si es verdad) : (que hace si es falso)
+
+polyfills  ==>>> nos permite hacer nuestra web y que todos los ordenadores lo entiendad por mas viejos q sean 
+
+(te da funciones nuevas asi las podes usar y el navegador por mas viejo q sea las puede entender) 
+
+
+const array = [1,2,3,4]
+
+const nuevoArray = array.map(num => num *2)  // nuevoArray = [2,4,6,8]
+
+======================================
+como hacer para q mi navegador sepa que es map si no lo sabe =>==>=>=>
+
+const miSegundoArray = array.miMap(num => num * 2) // ahora no me tira nada porque no sabe q es miMap 
+
+como agrego un polyfills (funcionabilidad q no soporta el navegador , y  yo le declaro para poder usarlo) =>>>>
+
+Array.prototype.miMap = function (callback) {
+(le voy a insertar un nuevo metodo, le asigno la funcion)
+
+	let arrayTransformado = []
+	for(let index = 0; index < this.length; index++){
+		const elemento = this[index]
+		const elementoTransformado = callback(elemento)
+		arrayTransformado.push(elementoTransformado)
+	}
+	return arrayTransformado
+}
+
+const miSegundoArray = array.miMap(num => num * 2)  // miSegundoArray = [2,4,6,8]
+
+
+
+retrocompatibilidad 
+
+webpack ==>> agarra todo tipo los js y los transforma en 1 , tipo css  con sass 
+
+
+babel ===>> ayuda a la traduccion del js
+
+JSX ==>>> mascara a la manera de escribir javascript , sintaxis parecida a html pero en realidad 
+escribis js 
+
+jsx ( javascript xml) 
+
+sintaxis ==> camelCase  borde-case => borderCase 
+
+cosnt style = {
+	background : red ;
+}
+
+<div className ="hola" style = {style}> </div>
+
+transpiling ===>>> convertir codigo en un lenguaje a otro 
+
+
+
+
+
+
+
+
+
+
+================
+<header>
+            <h1>Your Box</h1>
+            <nav>
+                <ul>
+                    <li>Inicio</li>
+                    <li>Categorias</li>
+                    <li>Contacto</li>
+                    <li>Soporte</li>
+                </ul>
+                <div classNameName ="carrito">
+                    <a href="#" ><img src="" /> </a>
+                </div>
+            </nav>
+        </header>

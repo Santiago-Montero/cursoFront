@@ -1,0 +1,21 @@
+// validate={(valores) =>{
+                // //     firstName: Yup.string()
+                // //     .max(15, 'Must be 15 characters or less')
+                // //     .required('Required'),
+                // // lastName: Yup.string()
+                // //     .max(20, 'Must be 20 characters or less')
+                // //     .required('Required'),
+                // // email: Yup.string().email('Invalid email address').required('Required'),
+                //     let errores = {};
+
+                //     if(!valores.email){
+                //         errores.email = 'Porfavor ingresa un mail'
+                //     } else if (!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valores.email)){
+                //         errores.email = 'Porfavor ingresa un mail valido'
+                //     }
+                //     if(!valores.password){
+                //         errores.password = 'Porfavor ingresa una contraseña'
+                //     }
+
+                //     return errores
+                // }}

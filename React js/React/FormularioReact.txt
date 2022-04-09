@@ -1,0 +1,56 @@
+const Formulario = () => {
+	const [ mail, setMail] = useState('');
+	const [ password, setPassword] = useState('');
+
+	// Funcion que se encargara de validar los datos y enviar el formulario
+	const handleSubmit = (e) => {
+		e.preventDefault();
+
+		// Comprobamos validacion del formulario ...
+		// Si todo es correcto enviamos el formulario
+
+		console.log('Formulario Enviado!');
+	}
+
+	// Funcion que se encarga de cambiar el estado del inputNombre
+	const handleMail = (e) => {
+		setMail(e.target.value); // valor del input 
+	}
+	
+	// Funcion que se encarga de cambiar el estado del inputCorreo
+	const handlePassword = (e) => {
+		setPassword(e.target.value);
+	}
+
+	return (
+		<>
+			<form action="" onSubmit={handleSubmit} className="formulario">
+				<div>
+					<label htmlFor="mail">Mail</label>
+					<input
+						type="text"
+						name="mail"
+						placeholder="mail"
+						id="mail"
+						value={mail}
+						onChange={handleMail}
+					/>
+				</div>
+
+				<div>
+					<label htmlFor="password">Contraseña</label>
+					<input
+						type="text"
+						name="pass"
+						placeholder="password"
+						id="password"
+						value={password}
+						onChange={handlePassword}
+					/>
+				</div>
+				<button type="submit">Enviar</button>
+			</form>
+		</>
+	);
+}
+export default Formulario;
